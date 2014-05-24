@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Job Finder Ireland</string>
+    <string name="version">1.01</string>
+    <string name="menu_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="txt_yes">Yes</string>
+    <string name="txt_no">No</string>
+    <string name="txt_about_text">Job Finder Ireland was designed with the intention of giving
+        users quick and easy access to available jobs around Ireland. It utilises the 
+        jobs.ie API to provide up to date real time information on all the latest jobs, across 
+        all Industries and Regions (in Ireland).\nSearch by Keyword, Industry, Location and/or Job Type to filter 
+        the results that suit you.\n\nTo view these jobs and apply online visit www.jobs.ie\n\nPlease note, this app is in no way affiliated with jobs.ie</string>
+    <string name="txt_about_title">About Job Finder Ireland</string>
+    <string name="txt_rate_title">Rate Job Finder Ireland</string>
+    <string name="txt_rate_text">I would really appreciate some feedback on Job Finder Ireland (good or bad)
+        so please spare a few seconds to rate the app on the Play Store.\nWould you like to rate the app now?</string>
+    <string name="txt_help_title">Help</string>
+    <string name="txt_help_text">Steps to searching for your ideal job: \n\n
+        1. Enter your search requirement by either entering some keywords or selecting options from the drop down menus provided.\n\n
+        2. Scroll through resulting list of jobs, pressing on the job you would like to view. Alternatively there is an 
+        option to save a job, to view later, by pushing the "star" icon.\n\n
+        3. A detailed view of the job and its specification is provided and here there are some options available to again
+        Save the job or Share it with others. It is also possible to apply for a job by hitting the Apply button but this
+        will take you to an external website from where you can apply.\n\nIf you have any
+        queries, feedback or recommendations please contact me at jobfinderireland@gmail.com. I would love to hear from you</string>
+    <string name="txt_timeout_title">Connection Error</string>
+    <string name="txt_timeout_text">There was an error connecting to the server. Please ensure you have a working Internet connection and try again.</string>
+    
+    <!-- Find Job Activity -->
+    <string name="category_button">Industry</string>
+    <string name="location_button">Location</string>
+    <string name="job_type_button">Job Type</string>
+    <string name="date_posted_button">Date Posted</string>
+    <string name="keywords_input">Job Title, Keywords or Company</string>
+    <string name="search_txt">Search</string>
+    <string name="saved_jobs_text">Saved Jobs</string>
+    <string name="industry_title_text">Industry:</string>
+    <string name="location_title_text">Location:</string>
+    <string name="job_type_title_text">Job Type:</string>
+    <string name="main_title">      Job Finder Ireland</string>   
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="drawer_icon_desc"></string>
+    <string name="recent_searches">Recent Searches</string>
+    
+    <!-- Job List Items  -->
+    <string name="company_title">Company: </string>
+    <string name="location_title">Location: </string>
+    <string name="date_posted_title">Posted: </string>
+    <string name="no_jobs_txt">No Jobs Found!</string>
+    <string name="remove_from_favourites">Remove from favourites</string>
+    <string name="save_to_favourites">Save to favourites</string>
+    
+    <!-- Job Details Items -->
+    <string name="no_job">Job No Longer Available</string>
+    <string name="save">Save</string>
+    <string name="details">Details</string>
+    <string name="apply">Apply</string>  
+    <string name="share">Share</string>
+    <string name="salary_title">Salary: </string>
+    <string name="description_title">Description: </string>  
+    <string name="job_saved_text">Job Saved to Favourites</string>
+    <string name="job_deleted_text">Job Removed from Favourites</string>
+    <string name="job_not_saved_text">Job is Already Saved!</string>
+    <string name="error_saving_job_text">There was an error saving the job. Please try again!</string>
+    <string name="error_deleting_job_text">There was an error deleting the job. Please try again!</string>
+    
+    <!-- Apply Job -->
+    <string name="name_title">Name: </string>
+    <string name="email_title">Email: </string>
+    <string name="phone_title">Phone: </string>
+    <string name="cover_note_title">Cover Note: </string>
+    <string name="cv_title">CV: </string>
+    <string name="cv_name">[Please Select CV]</string>
+    <string name="answer1_title">Answer 1: </string>
+    <string name="apply_btn_txt">Send Application</string>
+    <string name="cv_btn_txt">&#8230;</string>
+    
+    
+    <!-- Find Job Activity Job Type Array -->
+    <string-array name="job_type_array">
+        <item>Any</item>
+        <item>Permanent</item>
+        <item>Contract</item>
+    </string-array>
+    
+    <!-- Find Job Activity Date Posted Array -->
+    <string-array name="date_posted_array">
+        <item>All</item>
+        <item>Yesterday</item>
+        <item>Last Week</item>
+        <item>Last 2 Weeks</item>
+        <item>Last 3 Weeks</item>
+        <item>Last Month</item>
+    </string-array>
+    
+    <!-- Navigation Drawer List -->
+    <string-array name="drawer_item_array">      
+        <item>Saved Jobs</item>
+        <item>About</item>
+        <item>Rate</item>
+        <item>Help</item>
+    </string-array>
+    
+    
+
+</resources>

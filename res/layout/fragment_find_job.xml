@@ -1,0 +1,375 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/blankAdBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dip"
+        android:layout_alignParentBottom="true"
+        android:background="#202020"
+        android:gravity="bottom" >
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1258919070544585/3131184958" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/blankAdBar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!--
+            <Button
+                android:id="@+id/saved_jobs_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/search_button"
+                android:text="@string/saved_jobs_text"
+                android:textColor="@color/white" />
+            -->
+
+            <org.droidparts.widget.ClearableEditText
+                android:id="@+id/keyword"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/edittext_shape"
+                android:ellipsize="start"
+                android:hint="@string/keywords_input"
+                android:inputType="text"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:textColor="@color/gray" >
+            </org.droidparts.widget.ClearableEditText>
+
+            <RelativeLayout
+                android:id="@+id/spinner_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyword"
+                android:layout_marginTop="5dp"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/category_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/industry_title"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="0dip"
+                        android:layout_marginTop="0dip"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="@string/industry_title_text"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/category"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.8"
+                        android:prompt="@string/category_button"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_below="@+id/category_line"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/location_title"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="0dip"
+                        android:layout_marginTop="0dip"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="@string/location_title_text"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/location"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="2dip"
+                        android:layout_weight="0.8"
+                        android:prompt="@string/location_button"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/job_type_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_below="@+id/location_line"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/job_type_title"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="0dip"
+                        android:layout_marginTop="0dip"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="@string/job_type_title_text"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/job_type"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="2dip"
+                        android:layout_weight="0.8"
+                        android:prompt="@string/job_type_button"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <!--
+             <ie.jobfinder.app.customviews.NoDefaultSpinner
+		    android:id="@+id/date_posted"
+		    android:layout_width="fill_parent"
+		    android:layout_height="48dip"
+		    android:layout_below="@+id/job_type"
+		    android:layout_marginBottom="10dip"
+		    android:layout_marginTop="2dip"
+		    android:prompt="@string/date_posted_button"
+		    android:spinnerMode="dialog" />
+                -->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dip"
+                android:layout_below="@+id/spinner_layout"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="8dip" >
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/search_button"
+                    android:text="@string/search_txt"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_recent_searches"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_layout"
+                android:layout_marginBottom="8dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:text="@string/recent_searches"
+                android:textColor="@color/holo_blue"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/search_item_1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/txt_recent_searches"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" >
+
+                <!--
+                     <Button
+                    android:id="@+id/btn_remove_search_item_1"
+                    android:layout_width="18dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:drawableStart="@android:drawable/presence_offline" />
+                -->
+
+                <Button
+                    android:id="@+id/btn_search_item_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dip"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/Gray"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/v_search_item_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/btn_search_item_1"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/line_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_item_2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/search_item_1"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" >
+
+                <!--
+                <Button
+                    android:id="@+id/btn_remove_search_item_2"
+                    android:layout_width="18dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:drawableStart="@android:drawable/presence_offline" />
+                -->
+
+                <Button
+                    android:id="@+id/btn_search_item_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dip"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/Gray"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/v_search_item_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/btn_search_item_2"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/line_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_item_3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/search_item_2"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" >
+
+                <!--
+                <Button
+                    android:id="@+id/btn_remove_search_item_3"
+                    android:layout_width="18dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:drawableStart="@android:drawable/presence_offline" />
+                -->
+
+                <Button
+                    android:id="@+id/btn_search_item_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="32dip"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/Gray"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/v_search_item_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/btn_search_item_3"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/line_divider" />
+            </RelativeLayout>
+
+            <!--
+                 <RelativeLayout
+                android:id="@+id/search_item_4"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/search_item_3"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip" 
+                android:visibility="invisible" >
+
+                <Button
+                    android:id="@+id/btn_remove_search_item_4"
+                    android:layout_width="18dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:drawableStart="@android:drawable/presence_offline" />
+
+                <Button
+                    android:id="@+id/btn_search_item_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/Gray"
+                    android:textSize="14sp" />
+                
+                <View
+                android:id="@+id/v_search_item_4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/btn_search_item_4"
+                android:layout_marginBottom="2dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line_divider" />
+            </RelativeLayout>
+            -->
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

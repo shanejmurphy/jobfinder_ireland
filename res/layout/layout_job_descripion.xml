@@ -1,0 +1,37 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_show_job"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<!--     <RelativeLayout -->
+<!--         android:id="@+id/description_layout_job_details" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginBottom="5dip" -->
+<!--         android:layout_marginLeft="10dip" -->
+<!--         android:layout_marginRight="10dip" -->
+<!--         android:layout_marginTop="5dip" > -->
+
+<!--         <TextView -->
+<!--             android:id="@+id/description_title_job_details" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_alignParentTop="true" -->
+<!--             android:layout_marginBottom="0dip" -->
+<!--             android:layout_marginTop="0dip" -->
+<!--             android:text="@string/description_title" -->
+<!--             android:textColor="@color/gray" -->
+<!--             android:textSize="12sp" /> -->
+
+<!--         <WebView -->
+<!--             android:id="@+id/description_job_details" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_below="@+id/description_title_job_details" -->
+<!--             android:layout_marginBottom="0dip" -->
+<!--             android:layout_marginTop="0dip" -->
+<!--             android:paddingBottom="10dip" -->
+<!--             android:textSize="12sp" /> -->
+<!--     </RelativeLayout> -->
+
+</ScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+      android:state_pressed="true" >
+      <shape
+		    android:shape="rectangle" 
+		    android:padding="10dp" >
+		    <!-- you can use any color you want I used here gray color-->
+		    <solid 
+		        android:color="@color/SteelBlue"/> 
+		    <corners
+		        android:radius="4dip"/>
+		</shape>
+	</item>
+<!--     <item android:drawable="@color/holo_blue" -->
+<!--       android:state_pressed="false" /> -->
+    <item android:state_pressed="false" >
+        <shape
+		    android:shape="rectangle" 
+		    android:padding="10dp" >
+		    <!-- you can use any color you want I used here gray color-->
+		    <solid 
+		        android:color="@color/holo_blue"/> 
+		    <corners
+		        android:radius="4dip"/>
+		</shape>
+	</item>
+</selector>

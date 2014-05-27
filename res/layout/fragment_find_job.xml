@@ -208,7 +208,7 @@
             <RelativeLayout
                 android:id="@+id/search_item_1"
                 android:layout_width="fill_parent"
-                android:layout_height="40dip"
+                android:layout_height="48dip"
                 android:layout_below="@+id/txt_recent_searches"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip" >
@@ -226,12 +226,13 @@
                 <Button
                     android:id="@+id/btn_search_item_1"
                     android:layout_width="fill_parent"
-                    android:layout_height="32dip"
+                    android:layout_height="45dip"
                     android:layout_alignParentLeft="true"
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
+                    android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -240,15 +241,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1dip"
                     android:layout_below="@+id/btn_search_item_1"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginRight="10dip"
                     android:background="@color/line_divider" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/search_item_2"
                 android:layout_width="fill_parent"
-                android:layout_height="40dip"
+                android:layout_height="48dip"
                 android:layout_below="@+id/search_item_1"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip" >
@@ -266,12 +265,13 @@
                 <Button
                     android:id="@+id/btn_search_item_2"
                     android:layout_width="fill_parent"
-                    android:layout_height="32dip"
+                    android:layout_height="45dip"
                     android:layout_alignParentLeft="true"
                     android:background="@color/white"
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
+                                        android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -280,16 +280,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1dip"
                     android:layout_below="@+id/btn_search_item_2"
-                    android:layout_marginBottom="2dip"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginRight="10dip"
                     android:background="@color/line_divider" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/search_item_3"
                 android:layout_width="fill_parent"
-                android:layout_height="40dip"
+                android:layout_height="48dip"
                 android:layout_below="@+id/search_item_2"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip" >
@@ -307,7 +304,7 @@
                 <Button
                     android:id="@+id/btn_search_item_3"
                     android:layout_width="fill_parent"
-                    android:layout_height="32dip"
+                    android:layout_height="45dip"
                     android:layout_alignParentLeft="true"
                     android:background="@color/white"
                     android:ellipsize="end"
@@ -321,9 +318,6 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1dip"
                     android:layout_below="@+id/btn_search_item_3"
-                    android:layout_marginBottom="2dip"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginRight="10dip"
                     android:background="@color/line_divider" />
             </RelativeLayout>
 

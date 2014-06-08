@@ -34,6 +34,8 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.ExceptionParser;
+import com.google.analytics.tracking.android.ExceptionReporter;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
@@ -50,8 +52,16 @@ public class FindJobActivity extends SherlockFragmentActivity
 
     @Override
     public void onStart() {
-    	super.onStart();
+    	super.onStart();   	
     	EasyTracker.getInstance(this).activityStart(this);
+    	
+    	// Change uncaught exception parser...
+        // Note: Checking uncaughtExceptionHandler type can be useful if clearing ga_trackingId during development to disable analytics - avoid NullPointerException.
+        Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
+        if (uncaughtExceptionHandler instanceof ExceptionReporter) {
+          ExceptionReporter exceptionReporter = (ExceptionReporter) uncaughtExceptionHandler;
+          exceptionReporter.setExceptionParser(new AnalyticsExceptionParser());
+        }
     }
     
     @Override
@@ -342,5 +352,20 @@ public class FindJobActivity extends SherlockFragmentActivity
         mDrawerList.setItemChecked(position, true);
         //setTitle(mPlanetTitles[position]);
         mDrawerLayout.closeDrawer(mDrawerList);
+    }
+    
+    public class AnalyticsExceptionParser implements ExceptionParser {
+
+		@Override
+		public String getDescription(String threadName, Throwable t) {
+			// TODO Auto-generated method stub
+			String exception = "threadName = "
+			        + threadName
+			        + "\ngetMessage()= " + t.getMessage()
+			        + "\ngetLocalizedMessage()=" + t.getLocalizedMessage()
+			        + "\ngetCause()=" + t.getCause()
+			        + "\ngetStackTrace()=" + t.getStackTrace();
+			return exception;
+		}    	
     }
 }

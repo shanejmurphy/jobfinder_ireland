@@ -49,6 +49,14 @@ public class GetJobDetailsTask extends AsyncTask<Integer, Void, Job> {
 	}
 	
 	@Override
+	protected void onPreExecute()
+    {
+		this.dialog.setMessage("Loading Job...");
+		this.dialog.show();
+    }
+	
+	
+	@Override
 	protected Job doInBackground(Integer... params) {
 		Job job = new Job();
 		//retrieve the job details from WebService
@@ -108,7 +116,7 @@ public class GetJobDetailsTask extends AsyncTask<Integer, Void, Job> {
     		
     		//LogHelper.logDebug(TAG, "jobId = " + job.getDatePosted()); 
         }    
-        catch(SocketTimeoutException se) {
+/*        catch(SocketTimeoutException se) {
         	LogHelper.logDebug(TAG, se.toString());
         	//TODO: show dialog with retry information
 	  		//hide the dialog
@@ -120,7 +128,7 @@ public class GetJobDetailsTask extends AsyncTask<Integer, Void, Job> {
             builder.setView(help);
             builder.setCancelable(false);
             builder.show();
-        }
+        }*/
         catch (Exception exception) {
         	LogHelper.logDebug(TAG, exception.toString());
         	return null;

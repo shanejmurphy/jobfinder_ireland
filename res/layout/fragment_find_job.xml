@@ -1,28 +1,30 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="@color/white" >
-<!-- 
+
     <LinearLayout
         android:id="@+id/blankAdBar"
         android:layout_width="match_parent"
         android:layout_height="52dip"
         android:layout_alignParentBottom="true"
         android:background="#202020"
+        android:orientation="horizontal"
         android:gravity="bottom" >
 
-        <com.google.android.gms.ads.AdView
+     <!--    <com.google.android.gms.ads.AdView
             android:id="@+id/adViewHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-1258919070544585/3131184958" />
-    </LinearLayout> -->
+            ads:adUnitId="ca-app-pub-1258919070544585/3131184958" /> -->
+    </LinearLayout>
 
-<!--     <ScrollView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"> -->
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/blankAdBar" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -230,6 +232,7 @@
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
+                    android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -268,6 +271,7 @@
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
+                                        android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -361,3 +365,5 @@
 
         </RelativeLayout>
     </ScrollView>
+
+</RelativeLayout>

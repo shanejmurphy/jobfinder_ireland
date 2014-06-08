@@ -1,10 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="@color/white" >
-
+<!-- 
     <LinearLayout
         android:id="@+id/blankAdBar"
         android:layout_width="match_parent"
@@ -19,12 +18,11 @@
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-1258919070544585/3131184958" />
-    </LinearLayout>
+    </LinearLayout> -->
 
-    <ScrollView
+<!--     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/blankAdBar" >
+        android:layout_height="fill_parent"> -->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -232,7 +230,6 @@
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
-                    android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -271,7 +268,6 @@
                     android:ellipsize="end"
                     android:gravity="left|center_vertical"
                     android:singleLine="true"
-                                        android:text="HELLO WORLD"
                     android:textColor="@color/Gray"
                     android:textSize="14sp" />
 
@@ -365,5 +361,3 @@
 
         </RelativeLayout>
     </ScrollView>
-
-</RelativeLayout>

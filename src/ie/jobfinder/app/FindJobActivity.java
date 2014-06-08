@@ -36,6 +36,8 @@ import com.actionbarsherlock.view.MenuItem;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.ExceptionParser;
 import com.google.analytics.tracking.android.ExceptionReporter;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.sherlock.navigationdrawer.compat.SherlockActionBarDrawerToggle;
@@ -48,6 +50,9 @@ public class FindJobActivity extends SherlockFragmentActivity
     private DrawerLayout mDrawerLayout;
     private SherlockActionBarDrawerToggle mDrawerToggle;
     private ListView mDrawerList;
+    
+    /** The view to show the ad. */
+    private AdView adView;
 	
 
     @Override
@@ -107,6 +112,14 @@ public class FindJobActivity extends SherlockFragmentActivity
         mDrawerList.setAdapter(new DrawerItemAdapter(this, R.layout.drawer_list_item, getResources().getStringArray(R.array.drawer_item_array)));
         // Set the list's click listener
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        
+        //Ads
+        // The "loadAdOnCreate" and "testDevices" XML attributes no longer available.
+        adView = (AdView) mDrawerLayout.findViewById(R.id.adViewHome);
+        AdRequest adRequest = new AdRequest.Builder()
+            .addTestDevice(AppPool.TEST_DEVICE_ID)
+            .build();
+        adView.loadAd(adRequest);
 
         //ActionBar Stuff
         ActionBar actionBar = getSupportActionBar();
@@ -186,6 +199,10 @@ public class FindJobActivity extends SherlockFragmentActivity
  		super.onResume();
  		LogHelper.logDebug(TAG, "onResume()");
  		
+ 		if (adView != null) {
+ 		      adView.resume();
+ 		}
+ 		
  		//check for google play services before proceeding
      	int googleServicesResult = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
      	if(googleServicesResult != ConnectionResult.SUCCESS){
@@ -199,6 +216,10 @@ public class FindJobActivity extends SherlockFragmentActivity
     @Override
  	protected void onPause() {
  		super.onPause();
+ 		
+ 		if (adView != null) {
+ 		      adView.pause();
+ 		}
  		LogHelper.logDebug(TAG, "onPause()");
     }
     
@@ -211,6 +232,10 @@ public class FindJobActivity extends SherlockFragmentActivity
     
     @Override
  	protected void onDestroy() {
+    	// Destroy the AdView.
+        if (adView != null) {
+          adView.destroy();
+        }
  		super.onDestroy();
  		LogHelper.logDebug(TAG, "onDestroy()");
     }

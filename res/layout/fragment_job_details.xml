@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white" >
 
-    <LinearLayout
+<!--     <LinearLayout
         android:id="@+id/blankAdBar_job_details"
         android:layout_width="match_parent"
         android:layout_height="52dip"
@@ -21,13 +21,12 @@
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-1258919070544585/3131184958" />
-    </LinearLayout>
+    </LinearLayout> -->
 
     <RelativeLayout
         android:id="@+id/lyt_details_job_details"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/blankAdBar_job_details"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dip"
         android:layout_marginRight="5dip"
@@ -306,7 +305,6 @@
         android:id="@+id/lyt_no_job_job_details"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/blankAdBar_job_details"
         android:layout_marginLeft="5dip"
         android:layout_marginRight="5dip"
         android:layout_marginTop="5dip"

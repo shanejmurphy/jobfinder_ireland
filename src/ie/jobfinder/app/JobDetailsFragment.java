@@ -83,11 +83,11 @@ public class JobDetailsFragment extends SherlockDialogFragment {
 		View view = inflater.inflate(R.layout.fragment_job_details, container, false);
 
 		// The "loadAdOnCreate" and "testDevices" XML attributes no longer available.
-		AdView adView = (AdView) view.findViewById(R.id.adView_job_details);
-		AdRequest adRequest = new AdRequest.Builder()
-		.addTestDevice(AppPool.TEST_DEVICE_ID)
-		.build();
-		adView.loadAd(adRequest);
+//		AdView adView = (AdView) view.findViewById(R.id.adView_job_details);
+//		AdRequest adRequest = new AdRequest.Builder()
+//		.addTestDevice(AppPool.TEST_DEVICE_ID)
+//		.build();
+//		adView.loadAd(adRequest);
 
 		//decalare the layout items
 		RelativeLayout details = (RelativeLayout) view.findViewById(R.id.lyt_details_job_details);

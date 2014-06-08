@@ -210,11 +210,11 @@ public class JobRequirementsFragment extends SherlockDialogFragment implements O
 		  View view = inflater.inflate(R.layout.fragment_find_job, container, false);
 		  
           // The "loadAdOnCreate" and "testDevices" XML attributes no longer available.
-          AdView adView = (AdView) view.findViewById(R.id.adViewHome);
+          /*AdView adView = (AdView) view.findViewById(R.id.adViewHome);
           AdRequest adRequest = new AdRequest.Builder()
               .addTestDevice(AppPool.TEST_DEVICE_ID)
               .build();
-          adView.loadAd(adRequest);
+          adView.loadAd(adRequest);*/
 		  
 		  //initialise fragment entities
           /*Button savedButton = (Button) view.findViewById(R.id.saved_jobs_btn);

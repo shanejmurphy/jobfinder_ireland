@@ -87,11 +87,11 @@ public class JobListFragment extends SherlockDialogFragment implements OnJobDeta
 		View view = inflater.inflate(R.layout.fragment_job_list, container, false);
 		  
         // The "loadAdOnCreate" and "testDevices" XML attributes no longer available.
-        AdView adView = (AdView) view.findViewById(R.id.adView_job_list);
+/*        AdView adView = (AdView) view.findViewById(R.id.adView_job_list);
         AdRequest adRequest = new AdRequest.Builder()
             .addTestDevice(AppPool.TEST_DEVICE_ID)
             .build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
         
         if(this.mJobList.size() > 0) {
     
